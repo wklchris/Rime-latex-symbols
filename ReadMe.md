@@ -20,12 +20,12 @@
 1. 首先，将本文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
 
    或者，可以将本文件复制到同步盘，并用符号链接的形式来指向。这样的好处是可以在多个设备上同步该 yaml 文件的更改。例子：
-   a. 复制文件到 Onedrive 下的 `Sync-Misc\Rime` 文件夹（示例）。该路径可以自定义。
-   b. 以管理员身份运行 Powershell，并切换目录到 Rime 程序文件夹下的 `data` 子文件夹：
+   1. 复制文件到 Onedrive 下的 `Sync-Misc\Rime` 文件夹（示例）。该路径可以自定义。
+   2. 以管理员身份运行 Powershell，并切换目录到 Rime 程序文件夹下的 `data` 子文件夹：
       ```
       cd "C:\MyApps\Rime\weasel-0.14.3\data"
       ```
-   c. 创建一个指向在步骤 a 中复制到 Onedrive 的符号链接：
+   3. 创建一个指向在步骤 (1) 中复制到 Onedrive 的符号链接：
       ```
       New-Item -ItemType SymbolicLink -Path latexmath.yaml -Target "${env:onedrive}\Sync-Misc\Rime\latexmath.yaml"
       ```
