@@ -25,11 +25,11 @@
 #       ```
 #       cd "C:\MyApps\Rime\weasel-0.14.3\data"
 #       ```
-#    3. 创建一个指向在步骤 (1) 中复制到 Onedrive 的符号链接：
+#    3. 创建一个指向在上述步骤中复制到 Onedrive 的 YAML 文件的符号链接：
 #       ```
 #       New-Item -ItemType SymbolicLink -Path latexmath.yaml -Target "${env:onedrive}\Sync-Misc\Rime\latexmath.yaml"
 #       ```
-# 2. 打开用户文件夹下的 custom 文件 'double_pinyin_mspy.custom.yaml'，更新键值：
+# 2. 打开用户文件夹下的 custom 文件 `double_pinyin_mspy.custom.yaml`，更新键值：
 #    ```
 #    patch:
 #      punctuator/import_preset: latexmath
@@ -38,9 +38,15 @@
 #    ```
 # 3. 右键点击托盘区的 RIME 图标，点击“重新部署”以应用更改。
 #
+# ## 完整的符号支持列表
+# 
+# 支持的符号：
+#
+# {{参见 ReadMe}}
+#
 # ## 贡献与许可证
 # 
-# 本配置的部分内容来自官方 Weasel 项目部署后的默认 data/symbols.yaml 文件。 
+# 本配置的部分内容来自官方 Weasel 项目部署后的默认 `data/symbols.yaml` 文件。 
 #
 # 许可证：[GPLv3](./LICENSE)
 
@@ -245,9 +251,9 @@ punctuator:
       - *nearrow
       - *swarrow
       - *searrow
-    # 【希腊字母】
-    '/xila': [ α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω ]
-    '/xilad': [ Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω ]
+    # 【希腊字母】：/greek & /greekc. C for Capitalized.
+    '/greek': [ α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω ]
+    '/greekc': [ Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω ]
     '/alpha': [ α, Α ]
     '/beta': [ β, Β ]
     '/gamma': [ γ, Γ ]
@@ -273,7 +279,7 @@ punctuator:
     '/psi': [ ψ, Ψ ]
     '/omega': [ ω, Ω ]
     # 【罗马数字】
-    '/luoma': [ ⅰ, ⅱ, ⅲ, ⅳ, ⅴ, ⅵ, ⅶ, ⅷ, ⅸ, ⅹ, ⅺ, ⅻ, ⅼ, ⅽ, ⅾ, ⅿ ]
-    '/luomad': [ Ⅰ, Ⅱ, Ⅲ, Ⅳ, Ⅴ, Ⅵ, Ⅶ, Ⅷ, Ⅸ, Ⅹ, Ⅺ, Ⅻ, Ⅼ, Ⅽ, Ⅾ, Ⅿ ]
+    '/roman': [ ⅰ, ⅱ, ⅲ, ⅳ, ⅴ, ⅵ, ⅶ, ⅷ, ⅸ, ⅹ, ⅺ, ⅻ, ⅼ, ⅽ, ⅾ, ⅿ ]
+    '/romanc': [ Ⅰ, Ⅱ, Ⅲ, Ⅳ, Ⅴ, Ⅵ, Ⅶ, Ⅷ, Ⅸ, Ⅹ, Ⅺ, Ⅻ, Ⅼ, Ⅽ, Ⅾ, Ⅿ ]
     # 【其他】
-    '/xingbie': [ ♂, ♀, ⚢, ⚣, ⚤, ⚥, ⚦ ]
+    '/gender': [ ♂, ♀, ⚢, ⚣, ⚤, ⚥, ⚦ ]
