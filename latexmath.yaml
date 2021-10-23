@@ -15,7 +15,7 @@
 #
 # ## 使用方法
 # 
-# 此处以 Windows 上的微软双拼 RIME（小狼毫 Weasel）用户为例：
+# 此处以 Windows 上的微软双拼 RIME（小狼毫 Weasel）用户为例。
 #
 # 1. 首先，将 `latexmath.yaml` 文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
 #
@@ -29,7 +29,9 @@
 #       ```
 #       New-Item -ItemType SymbolicLink -Path latexmath.yaml -Target "${env:onedrive}\Sync-Misc\Rime\latexmath.yaml"
 #       ```
-# 2. 打开用户文件夹下的 custom 文件 `double_pinyin_mspy.custom.yaml`，更新键值：
+#       如果使用自定义的 Onedrive 路径，请相应地替换上述命令中的 `\Sync-Misc\Rime` 字符串。
+#
+# 2. 打开用户文件夹下微软双拼（`double_pinyin_mspy`）的 `custom` 配置文件 `double_pinyin_mspy.custom.yaml`，更新键值：
 #    ```
 #    patch:
 #      punctuator/import_preset: latexmath
@@ -194,7 +196,7 @@ punctuator:
     '/supset': [ ⊃, ⊇, ⫆, ⫌ ]
     '/in': ∈
     '/ni': ∋
-    '/notin': ∈
+    '/notin': ∉
     # 【箭头】
     '/implies': [ ⟹, ⇏, ⇒ ]
     '/impliedby': [ ⟸, ⇍, ⇐ ]
