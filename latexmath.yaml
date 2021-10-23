@@ -165,7 +165,7 @@ punctuator:
     '/plus': [ +, ⊕ ]
     '/minus': [ -, ⊖ ]
     '/times': [ ×, ⊗, ·, ⊙, ∘, ∙, ⋆, ∗ ]
-    '/dot': &dot [ ·, ⊙，∘, ∙ ]
+    '/dot': &dot [ ·, ⊙, ∘, ∙ ]
     '/cdot': *dot
     '/star': [ ⋆, ∗ ]
     '/ast': '∗' 
