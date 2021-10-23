@@ -17,7 +17,7 @@
 # 
 # 此处以 Windows 上的微软双拼 RIME（小狼毫 Weasel）用户为例：
 #
-# 1. 首先，将本文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
+# 1. 首先，将 `latexmath.yaml` 文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
 #
 #    或者，可以将本文件复制到同步盘，并用符号链接的形式来指向。这样的好处是可以在多个设备上同步该 yaml 文件的更改。例子：
 #    1. 复制文件到 Onedrive 下的 `Sync-Misc\Rime` 文件夹（示例）。该路径可以自定义。
