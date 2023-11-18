@@ -1,0 +1,169 @@
+# # 用于 Rime 的 LaTeX 符号输入配置（合并场景）
+#
+# *author: wklchris@github*
+
+config_version: '1.3'
+__include: symbols:/
+
+# 在 include 之后，合并更新键值。
+# 以下内容复制自 latexmath.yaml 中的同名键值。
+punctuator:
+  symbols:
+    # 【通用符号】
+    '/dots': &dots [ …, ⋯, ⋮, ⋰, ⋱ ]
+    '/cdots': *dots
+    '/ldots': *dots
+    '/vdots': *dots
+    '/ddots': *dots
+    '/forall': ∀
+    '/exists': ∃
+    '/because': ∵
+    '/therefore': ∴
+    '/sum': ∑
+    '/prod': ∏
+    '/sqrt': [ √, ∛, ∜ ]
+    '/propto': ∝
+    '/ratio': '∶'
+    '/inf': &inf ∞
+    '/infty': *inf
+    '/empty': ∅
+    '/log': ㏒
+    '/ln': ㏑
+    '/hslash': ℏ
+    # 【几何】
+    '/angle': ∠
+    '/parallel': ∥
+    '/perp': ⊥
+    '/sim': &sim [ ∼, ≃, ≅ ]
+    '/simeq': *sim
+    # 【微积分】
+    '/partial': ∂
+    '/nabla': ∇
+    '/int': ∫
+    '/iint': ∬
+    '/iiint': ∭
+    '/oint': ∮
+    '/oiint': ∯
+    '/oiiint': ∰
+    # 【二元运算符】
+    '/plus': [ +, ⊕ ]
+    '/minus': [ -, ⊖ ]
+    '/times': [ ×, ⊗, ·, ⊙, ∘, ∙, ⋆, ∗ ]
+    '/dot': &dot [ ·, ⊙, ∘, ∙ ]
+    '/cdot': *dot
+    '/star': [ ⋆, ∗ ]
+    '/ast': '∗' 
+    '/bullet': ∙
+    '/div': [ ÷, ⊘ ]
+    '/pm': [ ±, ∓ ]
+    ## 集合二元运算符
+    '/setop': [ ∪, ∩, ∖, ∨, ∧ ]
+    '/cup': ∪
+    '/cap': ∩
+    '/setminus': ∖
+    '/vee': &vee ∨
+    '/lor': *vee
+    '/wedge': &wedge ∧
+    '/land': *wedge
+    # 【二元关系符】
+    '/eq': [ ≡, ≔, ≈, ≌, ≝, ≜, ≟ ]
+    '/approx': ≈
+    '/neq': [ ≠, ≶, ≷, ⪋, ⪌ ]
+    '/le': [ '<', '≤', '⩽', '≪', '≯' ]
+    '/prec': [ ≺, ≼ ] 
+    '/ge': [ '>', '≥', '⩾', '≫', '≮' ]
+    '/succ': [ ≻, ≽ ]
+    ## 集合二元关系符
+    '/subset': [ ⊂, ⊆, ⫅, ⫋ ]
+    '/supset': [ ⊃, ⊇, ⫆, ⫌ ]
+    '/in': ∈
+    '/ni': ∋
+    '/notin': ∉
+    # 【箭头】
+    '/implies': [ ⟹, ⇏, ⇒ ]
+    '/impliedby': [ ⟸, ⇍, ⇐ ]
+    '/iff': [ ⟺, ⇔ ]
+    '/left': &left
+      - &leftarrow ←  # Leftwards arrow
+      - &longleft ⟵  # Long leftwards
+      - ⇦  # Leftwards white
+      - 🡨  # Wide-headed leftwards barb arrow
+      - ↼  # Leftwards harpoon with barb upwards
+      - ↽  # Leftwards harpoon with barb downwards
+      - ⮘  # Three-D top-lighted leftwards equilateral arrowhead
+      - ⮜  # Black leftwards equilateral arrowhead
+    '/leftarrow': *left
+    '/longleft': *longleft
+    '/right': &right
+      - &rightarrow →
+      - &longright ⟶
+      - ⇨
+      - 🡪
+      - ⮚
+      - ⮞
+    '/rightarrow': *right
+    '/longright': *longright
+    '/leftright': [ ↔, ⇄, ⇆, ⇌, ⇋, ⇔ ]  # 双向
+    ## 上下两个方向无长箭头
+    '/up': &up
+      - &uparrow ↑
+      - ⇧
+      - 🡩
+      - ⮙
+      - ⮝
+    '/uparrow': *up
+    '/down': &down
+      - &downarrow ↓
+      - ⇩
+      - 🡫
+      - ⮛
+      - ⮟
+    '/downarrow': *down
+    '/updown': [ ↕, ⇅, ⇵, ⥮, ⥯, ⇕ ]  # 双向
+    ## 其余四个方向
+    '/nwarrow': &nwarrow ↖
+    '/nearrow': &nearrow ↗
+    '/swarrow': &swarrow ↙
+    '/searrow': &searrow ↘
+    ## 基础箭头集合
+    '/arrow': 
+      - *leftarrow
+      - *rightarrow
+      - *uparrow
+      - *downarrow
+      - *nwarrow
+      - *nearrow
+      - *swarrow
+      - *searrow
+    # 【希腊字母】：/greek & /greekc. C for Capitalized.
+    '/greek': [ α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, ν, ξ, ο, π, ρ, σ, τ, υ, φ, χ, ψ, ω ]
+    '/greekc': [ Α, Β, Γ, Δ, Ε, Ζ, Η, Θ, Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π, Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω ]
+    '/alpha': [ α, Α ]
+    '/beta': [ β, Β ]
+    '/gamma': [ γ, Γ ]
+    '/delta': [ δ, Δ ]
+    '/epsilon': [ ε, Ε ]
+    '/zeta': [ ζ, Ζ ]
+    '/eta': [ η, Η ]
+    '/theta': [ θ, Θ ]
+    '/iota': [ ι, Ι ]
+    '/kappa': [ κ, Κ ]
+    '/lambda': [ λ, Λ ]
+    '/mu': [ μ, Μ ]
+    '/nu': [ ν, Ν ]
+    '/xi': [ ξ, Ξ ]
+    '/omicron': [ ο, Ο ]
+    '/pi': [ π, Π ]
+    '/rho': [ ρ, Ρ ]
+    '/sigma': [ σ, Σ ]
+    '/tau': [ τ, Τ ]
+    '/upsilon': [ υ, Υ ]
+    '/phi': [ φ, Φ ]
+    '/chi': [ χ, Χ ]
+    '/psi': [ ψ, Ψ ]
+    '/omega': [ ω, Ω ]
+    # 【罗马数字】
+    '/roman': [ ⅰ, ⅱ, ⅲ, ⅳ, ⅴ, ⅵ, ⅶ, ⅷ, ⅸ, ⅹ, ⅺ, ⅻ, ⅼ, ⅽ, ⅾ, ⅿ ]
+    '/romanc': [ Ⅰ, Ⅱ, Ⅲ, Ⅳ, Ⅴ, Ⅵ, Ⅶ, Ⅷ, Ⅸ, Ⅹ, Ⅺ, Ⅻ, Ⅼ, Ⅽ, Ⅾ, Ⅿ ]
+    # 【其他】
+    '/gender': [ ♂, ♀, ⚢, ⚣, ⚤, ⚥, ⚦ ]

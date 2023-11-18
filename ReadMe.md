@@ -17,11 +17,18 @@
 
 此处以 Windows 上的微软双拼 RIME（小狼毫 Weasel）用户为例。
 
-1. 首先，将 `latexmath.yaml` 文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
+1. 首先，根据你的使用场景，选用你需要复制的文件：
 
-   或者，可以将本文件复制到同步盘，并用符号链接的形式来指向。这样的好处是可以在多个设备上同步该 yaml 文件的更改。例子：
+   * (a) 优先场景（覆盖默认的 symbols.yaml 字符配置）：使用 `latexmath.yaml` 文件。
+   * (b) 合并场景（将 symbols.yaml 配置合并过来）：使用 `latexmath_compatible.yaml` 文件。
+
+2. 将在上一步中选择的 YAML 文件复制到 RIME 程序文件夹下的 data 目录中：`RIME/weasel-0.xx/data`。
+
+   * 如果你选择了合并场景，请将复制后的 `latexmath_compatible.yaml` 文件重命名为 `latexmath.yaml` 。
+
+   或者，可以将该 YAML 文件复制到同步盘，并用符号链接的形式来指向。这样的好处是可以在多个设备上同步该 yaml 文件的更改。下例以 latexmath.yaml 文件与 Onedrive 同步为例：
    1. 复制文件到 Onedrive 下的 `Sync-Misc\Rime` 文件夹（示例）。该路径可以自定义。
-   2. 以管理员身份运行 Powershell，并切换目录到 Rime 程序文件夹下的 `data` 子文件夹：
+   2. 以管理员身份运行 Powershell，并切换目录到 Rime 程序文件夹下的 `data` 子文件夹（示例）：
       ```
       cd "C:\MyApps\Rime\weasel-0.14.3\data"
       ```
@@ -31,7 +38,7 @@
       ```
       如果使用自定义的 Onedrive 路径，请相应地替换上述命令中的 `\Sync-Misc\Rime` 字符串。
 
-2. 打开用户文件夹下微软双拼（`double_pinyin_mspy`）的 `custom` 配置文件 `double_pinyin_mspy.custom.yaml`，更新键值：
+4. 如上在 data 目录中复制好文件后，打开用户文件夹下微软双拼（`double_pinyin_mspy`）的 `custom` 配置文件 `double_pinyin_mspy.custom.yaml`，更新键值：
    ```
    patch:
      punctuator/import_preset: latexmath
