@@ -2,16 +2,23 @@
 
 *author: wklchris@github*
 
-配置 <input-schema>.custom.yaml 文件来在 [RIME 输入法](https://rime.im/) 中使用 LaTeX 数学符号。
+配置 <input-schema>.custom.yaml 文件来在 [RIME 输入法](https://rime.im/) 中使用 LaTeX 指令输入数学符号。
+
+> 注意：本配置文件虽然参照 LaTeX 数学符号命令，但也添加了一些额外的命令。因此，本文件中的输入指令并非与 LaTeX 严格对应（例如，平行四边形符号 `/perm` 、性别符号 `\gender` 等）。
 
 支持的符号：
 
 - 常用数学符号，包括几何、微积分。
+- 特殊字体符号 `/mathbb`，包括数集 ℕ（`/bbn`）等
 - 被 LaTeX 主数学宏包 amsmath/amssymb 支持的一些常用符号：
   * 运算符与关系符
   * 箭头符号
-- 希腊字母与罗马数字
-- 少量其他符号
+- 希腊字母：除全称命令（如 `\alpha`）外，额外添加了：
+  * 小写希腊字母集（包括变体） `/greek`
+  * 大写希腊字母集 `/greekc`
+  * 变体希腊字母集 `/greekv`
+- 罗马字母：小写 `/roman` 与大写 `/romanc` 罗马字母集
+- 少量其他符号：性别 `\gender`、货币 `$`、温度 `\degree` 等。
 
 ## 使用方法
 
@@ -73,11 +80,42 @@
 | /log | ㏒ |
 | /ln | ㏑ |
 | /hslash | ℏ |
-| /angle | ∠ |
+| /sub | ₀, ₁, ₂, ₃, ₄, ₅, ₆, ₇ |
+| | ₈, ₉, ₙ |
+| /subnum | ₀, ₁, ₂, ₃, ₄, ₅, ₆, ₇ |
+| | ₈, ₉, ₙ |
+| /sup | ⁰, ¹, ², ³, ⁴, ⁵, ⁶, ⁷ |
+| | ⁸, ⁹, ⁿ |
+| /supnum | ⁰, ¹, ², ³, ⁴, ⁵, ⁶, ⁷ |
+| | ⁸, ⁹, ⁿ |
+| /degree | °, ℃, ℉ |
+| /ell | ℓ |
+| /mathbb | ℂ, ℕ, ℙ, ℚ, ℝ, ℤ |
+| /bbc | ℂ |
+| /bbn | ℕ, ℕ₀, ℕ₊ |
+| /bbp | ℙ |
+| /bbq | ℚ, ℚ₊, ℚ₋ |
+| /bbr | ℝ, ℝ₊, ℝ₋ |
+| /bbz | ℤ, ℤ₊, ℤ₋ |
+| /angle | ∠, ∟, ⦜, ⊾, ∡, ∢ |
 | /parallel | ∥ |
 | /perp | ⊥ |
 | /sim | ∼, ≃, ≅ |
 | /simeq | ∼, ≃, ≅ |
+| /circle | ○, ●, ◎, ◉ |
+| /sector | ⌔, ⌓ |
+| /arc | ◜, ◝, ◞, ◟ |
+| /ellipse | ⬭, ⬬, ⬯, ⬮ |
+| /triangle | △, ◺, ◿, ▲, ◁, ◀, ▷, ▶ |
+| | ▽, ▼, ◣, ◢, ◹, ◥, ◸, ◤ |
+| /square | □, ■ |
+| /rectangle | ▭, ▬, ▯, ▮ |
+| /rect | ▭, ▬, ▯, ▮ |
+| /diamond | ◇, ◆, ◈ |
+| /lozenge | ◇, ◆, ◈ |
+| /parallelogram | ▱, ▰ |
+| /parm | ▱, ▰ |
+| /polygon | ⬠, ⬟, ⬡, ⬢ |
 | /partial | ∂ |
 | /nabla | ∇ |
 | /int | ∫ |
@@ -86,8 +124,8 @@
 | /oint | ∮ |
 | /oiint | ∯ |
 | /oiiint | ∰ |
-| /plus | +, ⊕ |
-| /minus | -, ⊖ |
+| /plus | +, ⁺, ₊, ⊕ |
+| /minus | -, ⁻, ₋, ⊖ |
 | /times | ×, ⊗, ·, ⊙, ∘, ∙, ⋆, ∗ |
 | /dot | ·, ⊙, ∘, ∙ |
 | /cdot | ·, ⊙, ∘, ∙ |
@@ -136,9 +174,11 @@
 | /swarrow | ↙ |
 | /searrow | ↘ |
 | /arrow | ←, →, ↑, ↓, ↖, ↗, ↙, ↘ |
-| /greek | α, β, γ, δ, ε, ζ, η, θ |
-| | ι, κ, λ, μ, ν, ξ, ο, π |
-| | ρ, σ, τ, υ, φ, χ, ψ, ω |
+| /greek | α, β, γ, δ, ϵ, ε, ζ, η |
+| | θ, ϑ, ι, κ, ϰ, λ, μ, ν |
+| | ξ, ο, π, ϖ, ρ, ϱ, σ, ς |
+| | τ, υ, ϕ, φ, χ, ψ, ω |
+| /greekv | ε, ϑ, ϰ, ϖ, ϱ, ς, φ |
 | /greekc | Α, Β, Γ, Δ, Ε, Ζ, Η, Θ |
 | | Ι, Κ, Λ, Μ, Ν, Ξ, Ο, Π |
 | | Ρ, Σ, Τ, Υ, Φ, Χ, Ψ, Ω |
@@ -146,23 +186,30 @@
 | /beta | β, Β |
 | /gamma | γ, Γ |
 | /delta | δ, Δ |
-| /epsilon | ε, Ε |
+| /epsilon | ϵ, ε, Ε |
+| /varepsilon | ε |
 | /zeta | ζ, Ζ |
 | /eta | η, Η |
-| /theta | θ, Θ |
+| /theta | θ, ϑ, Θ |
+| /vartheta | ϑ |
 | /iota | ι, Ι |
-| /kappa | κ, Κ |
+| /kappa | κ, ϰ, Κ |
+| /varkappa | ϰ |
 | /lambda | λ, Λ |
 | /mu | μ, Μ |
 | /nu | ν, Ν |
 | /xi | ξ, Ξ |
 | /omicron | ο, Ο |
-| /pi | π, Π |
-| /rho | ρ, Ρ |
-| /sigma | σ, Σ |
+| /pi | π, ϖ, Π |
+| /varpi | ϖ |
+| /rho | ρ, ϱ, Ρ |
+| /varrho | ϱ |
+| /sigma | σ, ς, Σ |
+| /varsigma | ς |
 | /tau | τ, Τ |
 | /upsilon | υ, Υ |
-| /phi | φ, Φ |
+| /phi | ϕ, φ, Φ |
+| /varphi | φ |
 | /chi | χ, Χ |
 | /psi | ψ, Ψ |
 | /omega | ω, Ω |
